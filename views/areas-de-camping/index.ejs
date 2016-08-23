@@ -1,0 +1,39 @@
+<% include ../partials/header %>
+
+<div class="container">
+
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Seja-bem vindo ao Yelp Camping!</h1>
+            <p>As melhores áreas de camping do mundo estão aqui!</p>
+            <p><a href="/areas-de-camping/new" class="btn btn-primary btn-large">Adicionar Área de Camping</a></p>
+        </div>
+    </header>
+
+    <!--<div class="row" style="display: flex; flex-wrap: wrap;">-->
+        <!--<div class="col-lg-12">-->
+            <!--<h3>Áreas de Camping</h3>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <div class="row" style="display: flex; flex-wrap: wrap;">
+
+        <% areas.forEach(function(area) { %>
+
+        <div class="col-md-3 col-sm-6">
+            <div class="thumbnail text-center">
+                <img src="<%= area.imagem %>" class="fit" alt="<%= area.nome %>">
+                <div class="caption text-center"><strong><%= area.nome %></strong></div>
+                <p>
+                    <a href="/areas-de-camping/<%= area._id %>" class="btn btn-primary ">Mais Informações</a>
+                </p>
+            </div>
+        </div>
+
+        <% }); %>
+    </div>
+
+
+</div>
+
+<% include ../partials/footer %>

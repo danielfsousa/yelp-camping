@@ -1,0 +1,29 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="row">
+
+        <h1 class="text-center">Adicionar Área de Camping</h1>
+        <div style="width: 30%; margin: 40px auto">
+            <form action="/areas-de-camping" method="post">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="nome" placeholder="Nome">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="imagem" placeholder="Imagem">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" name="descricao" placeholder="Descrição" rows="6"></textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-large btn-primary btn-block" type="submit">Adicionar</button>
+                </div>
+            </form>
+            <a href="/areas-de-camping">Voltar</a>
+        </div>
+
+    </div>
+
+</div>
+
+<% include ../partials/footer %>

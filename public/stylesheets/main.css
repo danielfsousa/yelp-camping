@@ -1,0 +1,12 @@
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail img.fit {
+    height: 160px;
+    width: 100%;
+}
+
+.thumbnail .caption-full {
+    padding: 10px;
+}

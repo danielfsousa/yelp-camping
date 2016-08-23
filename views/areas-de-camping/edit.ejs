@@ -1,0 +1,29 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="row">
+
+        <h1 class="text-center">Editar <%= area.nome %></h1>
+        <div style="width: 30%; margin: 40px auto">
+            <form action="/areas-de-camping/<%= area._id %>?_method=PUT" method="post">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="area[nome]" placeholder="Nome" value="<%= area.nome %>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="area[imagem]" placeholder="Imagem" value="<%= area.imagem %>">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" name="area[descricao]" placeholder="Descrição" rows="6"><%= area.descricao %></textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-large btn-primary btn-block" type="submit">Salvar</button>
+                </div>
+            </form>
+            <a href="/areas-de-camping/<%= area._id %>">Voltar</a>
+        </div>
+
+    </div>
+
+</div>
+
+<% include ../partials/footer %>
