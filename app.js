@@ -21,7 +21,7 @@ var indexRoutes = require('./routes/index');
 var comentariosRoutes = require('./routes/comentarios');
 var areasDeCampingRoutes = require('./routes/areas-de-camping');
 
-var PORT = process.env.PORT || 3000;
+var PORTA = process.env.PORT || 3000;
 
 // ========================
 //   Config
@@ -69,6 +69,6 @@ app.get('/', function (req, res) {
 // ========================
 //   Init
 // ========================
-app.listen(PORT, function() {
+app.listen(PORTA, function() {
     console.log('servidor iniciado');
 });
